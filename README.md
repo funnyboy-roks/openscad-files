@@ -25,6 +25,12 @@ openscad <file.scad> -o <file.stl>
 >
 > This sections is auto generated (ish) and may not be 100% perfect.
 
+# `cartridge-box.scad`
+
+A small box designed hold some ink cartridges
+
+![Rendered Image](./img/cartridge-box.png)
+
 # `lamy-t10.scad`
 
 Clip for holding five LAMY T10 ink cartridges (https://www.lamy.com/en-us/p/lamy-t-10-ink/50727869088078)

@@ -17,6 +17,8 @@ module clip() {
     }
 }
 
+function comb_width() = clip_width * 4 + wall_thicc;
+
 module comb() {
     difference() {
         union() {
@@ -35,7 +37,7 @@ union() {
         translate([i * (clip_width - wall_thicc), 0, 0])
             cube([wall_thicc, 30, wall_thicc]);
     }
-    cube([clip_width * 4 + wall_thicc, 30, 1]);
+    cube([comb_width(), 30, 1]);
     comb();
     translate([0, 30, 0]) comb();
 }

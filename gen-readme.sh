@@ -1,8 +1,8 @@
 #!/bin/sh
 
-out=README.md
+readme=README.md
 
-cat > README.md <<EOF
+cat > $readme <<EOF
 # OpenSCAD Files
 
 This is a collection of random things that I've modelled in [OpenSCAD]
@@ -38,17 +38,20 @@ for file in $(git ls-files | grep '\.scad$'); do
     echo "Generating from $file"
     header=$(head -n1 "$file")
 
-    echo -e "# \`$file\`\n" >> $out
+    echo -e "# \`$file\`\n" >> $readme
 
     if [[ $header == '// '* ]]; then
         header=${header:3}
         echo "header: $header"
-        echo -e "$header\n" >> $out
+        echo -e "$header\n" >> $readme
     fi
 
     out_png="img/${file%.scad}.png"
     echo "Generating $out_png"
     openscad --preview png "$file" --imgsize=1024,1024 -o "$out_png" --colorscheme DeepOcean
+    git add "$out_png"
 
-    echo -e "![Rendered Image](./$out_png)\n" >> $out
+    echo -e "![Rendered Image](./$out_png)\n" >> $readme
 done
+
+git add $readme

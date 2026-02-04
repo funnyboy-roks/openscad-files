@@ -31,11 +31,29 @@ A small box designed hold some ink cartridges
 
 ![Rendered Image](./img/cartridge-box.png)
 
+# `chip-box.scad`
+
+A box for holding poker chips
+
+![Rendered Image](./img/chip-box.png)
+
+# `crank.scad`
+
+Crank for https://www.thingiverse.com/thing:264769
+
+![Rendered Image](./img/crank.png)
+
 # `lamy-t10.scad`
 
 Clip for holding five LAMY T10 ink cartridges (https://www.lamy.com/en-us/p/lamy-t-10-ink/50727869088078)
 
 ![Rendered Image](./img/lamy-t10.png)
+
+# `power-brick-holder.scad`
+
+Holder for laptop charger power brick
+
+![Rendered Image](./img/power-brick-holder.png)
 
 # `wire-rack-surface.scad`
 

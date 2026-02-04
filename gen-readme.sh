@@ -34,7 +34,16 @@ EOF
 
 mkdir -p img
 
-for file in $(git ls-files | grep '\.scad$'); do
+created=()
+gen-img() {
+    file="$1"
+    out_png="$2"
+
+    openscad --preview png "$file" --imgsize=1024,1024 -o "$out_png" --colorscheme DeepOcean
+    created+=("$out_png")
+}
+
+for file in $(git ls-files | grep '\.scad$' | sort); do
     echo "Generating from $file"
     header=$(head -n1 "$file")
 
@@ -48,10 +57,11 @@ for file in $(git ls-files | grep '\.scad$'); do
 
     out_png="img/${file%.scad}.png"
     echo "Generating $out_png"
-    openscad --preview png "$file" --imgsize=1024,1024 -o "$out_png" --colorscheme DeepOcean
-    git add "$out_png"
+    gen-img "$file" "$out_png" & # this can happen in the background
 
     echo -e "![Rendered Image](./$out_png)\n" >> $readme
 done
 
-git add $readme
+wait
+
+git add $created "$readme"

@@ -49,6 +49,12 @@ Clip for holding five LAMY T10 ink cartridges (https://www.lamy.com/en-us/p/lamy
 
 ![Rendered Image](./img/lamy-t10.png)
 
+# `magnet-cable.scad`
+
+A thing that can be connected to a cable to make it magnetic
+
+![Rendered Image](./img/magnet-cable.png)
+
 # `power-brick-holder.scad`
 
 Holder for laptop charger power brick

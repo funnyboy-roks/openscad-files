@@ -61,7 +61,15 @@ Holder for laptop charger power brick
 
 ![Rendered Image](./img/power-brick-holder.png)
 
+# `wire-rack-surface-corner.scad`
+
+Surface for the corner of a wire rack
+
+![Rendered Image](./img/wire-rack-surface-corner.png)
+
 # `wire-rack-surface.scad`
+
+Surface for a wire rack
 
 ![Rendered Image](./img/wire-rack-surface.png)
 

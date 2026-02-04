@@ -1,9 +1,11 @@
+// Surface for a wire rack
+
 wire_diameter = 2.7;
 clip_width = 2;
 clip_padding = 5;
-platform_width = 111;
+platform_width = 181;
 platform_height = 0.5;
-clip_offset = 27.6;
+clip_offset = 26.5; // center of first clip from end
 pole_size = 26;
 spacing = 50;
 
@@ -29,45 +31,11 @@ module clip(pos) {
 }
 
 union() {
-    //cube([2, 50+2+wire_diameter, 2]);
-    difference() {
-        platform_depth = clip_offset + 50 + 50 + clip_size + spacing/2+clip_size/2;
-        echo(platform_depth)
-        cube([platform_width, platform_depth, platform_height]);
+    platform_depth = clip_offset + spacing + spacing + clip_size + (spacing/2-clip_size/2) + 22.4/2;
+    echo(platform_depth = platform_depth);
+    cube([platform_width, platform_depth, platform_height]);
 
-        // // cutout for pole (bottom left)
-        // translate([-.001, -.001]) // slight offset so no outside there
-        // color("red")
-        // union() {
-        //     cutout_height = 10;
-        //
-        //     translate([pole_size/2, pole_size/2])
-        //         cylinder(cutout_height, pole_size/2, pole_size/2, center=true);
-        //
-        //     translate([0, 0, -cutout_height/2]) {
-        //         cube([pole_size/2, pole_size  , cutout_height]);
-        //         cube([pole_size  , pole_size/2, cutout_height]);
-        //     }
-        // }
-
-        // // cutout for pole (bottom right)
-        // translate([.001, .001]) // slight offset so no outside there
-        // color("red")
-        // union() {
-        //     cutout_height = 10;
-
-        //     translate([platform_width - pole_size/2, pole_size/2])
-        //         cylinder(cutout_height, pole_size/2, pole_size/2, center=true);
-
-        //     translate([platform_width - pole_size, 0, -cutout_height/2]) {
-        //         translate([pole_size/2, 0])
-        //             cube([pole_size/2, pole_size, cutout_height]);
-        //         cube([pole_size  , pole_size/2, cutout_height]);
-        //     }
-        // }
-    }
-
-    for (x = [clip_padding, platform_width - clip_padding - clip_width]) {
+    for (x = [clip_padding, platform_width/2 - clip_width/2, platform_width - clip_padding - clip_width]) {
         for (y = [0:2]) {
             clip([x, clip_offset + spacing * y, platform_height]);
         }

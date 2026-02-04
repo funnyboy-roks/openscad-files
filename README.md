@@ -25,6 +25,12 @@ openscad <file.scad> -o <file.stl>
 >
 > This sections is auto generated (ish) and may not be 100% perfect.
 
+# `can-top.scad`
+
+A simple lid for a can that I have, with a slot for aluminium can tabs
+
+![Rendered Image](./img/can-top.png)
+
 # `cartridge-box.scad`
 
 A small box designed hold some ink cartridges

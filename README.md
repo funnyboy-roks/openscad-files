@@ -61,6 +61,12 @@ A thing that can be connected to a cable to make it magnetic
 
 ![Rendered Image](./img/magnet-cable.png)
 
+# `power-brick-clip.scad`
+
+A pair of clips for holding a power brick
+
+![Rendered Image](./img/power-brick-clip.png)
+
 # `power-brick-holder.scad`
 
 Holder for laptop charger power brick

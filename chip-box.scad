@@ -73,7 +73,18 @@ difference() {
 
     translate([inside_width + wall_thicc - wall_thicc/2, wall_thicc, chip_dia + wall_thicc + top_gap])
         cube([5, inside_depth, 5]);
+
 }
 
 translate([inside_width + wall_thicc*2 + 50, 0, 0])
     top();
+
+image_w = 250;
+image_h = 384;
+top_d = inside_width + wall_thicc + .5;
+top_w = top_depth - top_thicc + .5;
+inset = 5;
+translate([inside_width + wall_thicc*2 + 50 + top_d - inset, top_thicc/2 + inset, top_thicc + 1])
+    rotate([0, 0, 90])
+    scale([(top_w - inset*2)/image_w, (top_d - inset*2)/image_h, .01])
+    surface(file = "card.png", invert = true);

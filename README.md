@@ -25,6 +25,12 @@ openscad <file.scad> -o <file.stl>
 >
 > This sections is auto generated (ish) and may not be 100% perfect.
 
+# `candle.scad`
+
+A weird candle expirement that isn't really effective, but it exists now (:
+
+![Rendered Image](./img/candle.png)
+
 # `can-top.scad`
 
 A simple lid for a can that I have, with a slot for aluminium can tabs

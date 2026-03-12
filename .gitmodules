@@ -1,0 +1,6 @@
+[submodule "StoneAgeLib"]
+	path = StoneAgeLib
+	url = https://github.com/Stone-Age-Sculptor/StoneAgeLib.git
+[submodule "dotSCAD"]
+	path = dotSCAD
+	url = https://github.com/JustinSDK/dotSCAD.git

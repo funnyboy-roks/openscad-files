@@ -79,6 +79,12 @@ Holder for laptop charger power brick
 
 ![Rendered Image](./img/power-brick-holder.png)
 
+# `swatch.scad`
+
+Swatches for viewing filaments and their names
+
+![Rendered Image](./img/swatch.png)
+
 # `wire-rack-surface-corner.scad`
 
 Surface for the corner of a wire rack
